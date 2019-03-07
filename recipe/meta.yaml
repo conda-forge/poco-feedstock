@@ -20,14 +20,15 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - openssl
-    - unixodbc # [not win]
+    - unixodbc  # [not win]
   run:
     - openssl
-    - unixodbc # [not win]
+    - unixodbc  # [not win]
 
 test:
   commands:
     - test -f ${PREFIX}/lib/libPocoNet${SHLIB_EXT}  # [unix]
+    - if not exist %LIBRARY_BIN%\PocoNet%SHLIB_EXT% exit 1  # [win]
 
 about:
   home: https://github.com/pocoproject/poco
