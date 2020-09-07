@@ -10,7 +10,10 @@ source:
   sha256: 7f5931e0bb06bc2880a0f3867053a2fddf6c0d3e5dd96342a665460301fc34ca
 
 build:
-  number: 0
+  number: 1
+  # poco is quite bad at ABI stability: https://abi-laboratory.pro/index.php?view=timeline&l=poco
+  run_exports:
+    - {{ pin_subpackage("poco", max_pin="x.x.x") }}
 
 requirements:
   build:
@@ -28,6 +31,7 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/lib/libPocoNet${SHLIB_EXT}  # [unix]
+    - test ! -f ${PREFIX}/lib/libPocoNet.a  # [unix]
     - if not exist %LIBRARY_BIN%\PocoNet%SHLIB_EXT% exit 1  # [win]
 
 about:
