@@ -1,5 +1,5 @@
 {% set name = "poco" %}
-{% set version = "1.10.1" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pocoproject.org/releases/{{ name }}-{{ version }}/{{ name }}-{{ version }}-all.tar.gz
-  sha256: 7f5931e0bb06bc2880a0f3867053a2fddf6c0d3e5dd96342a665460301fc34ca
+  sha256: 246b9705ed3ad7b924ccbc34ba4cbfdb1c8cb59d9e1adf77f01b6f8b0a561d8f
 
 build:
-  number: 1
+  number: 0
   # poco is quite bad at ABI stability: https://abi-laboratory.pro/index.php?view=timeline&l=poco
   run_exports:
     - {{ pin_subpackage("poco", max_pin="x.x.x") }}
