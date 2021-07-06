@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pocoproject.org/releases/{{ name }}-{{ version }}/{{ name }}-{{ version }}-all.tar.gz
-  sha256: 246b9705ed3ad7b924ccbc34ba4cbfdb1c8cb59d9e1adf77f01b6f8b0a561d8f
+  sha256: 9a29a86bb9b889fc4cc5fb45f4ab065a48700ad71ff842340e13d32759281db9
 
 build:
-  number: 0
+  number: 1
   # poco is quite bad at ABI stability: https://abi-laboratory.pro/index.php?view=timeline&l=poco
   run_exports:
     - {{ pin_subpackage("poco", max_pin="x.x.x") }}
