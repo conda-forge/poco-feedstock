@@ -10,7 +10,7 @@ source:
   sha256: 9a29a86bb9b889fc4cc5fb45f4ab065a48700ad71ff842340e13d32759281db9
 
 build:
-  number: 1
+  number: 2
   # poco is quite bad at ABI stability: https://abi-laboratory.pro/index.php?view=timeline&l=poco
   run_exports:
     - {{ pin_subpackage("poco", max_pin="x.x.x") }}
