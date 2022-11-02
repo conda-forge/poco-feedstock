@@ -1,5 +1,5 @@
 {% set name = "poco" %}
-{% set version = "1.12.3" %}
+{% set version = "1.12.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pocoproject.org/releases/{{ name }}-{{ version }}/{{ name }}-{{ version }}-all.tar.gz
-  sha256: 939389fb9a9db8b57bf29c314e9a2e6fd364f3121e2ee905365c5aba693e3eb1
+  sha256: 4c3584daa5b0e973f268654dbeb1171ec7621e358b2b64363cd1abd558a68777
 
 build:
   number: 0
