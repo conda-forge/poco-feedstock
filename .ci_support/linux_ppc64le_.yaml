@@ -21,7 +21,7 @@ docker_image:
 openssl:
 - '3'
 poco:
-- 1.14.0
+- 1.14.1
 target_platform:
 - linux-ppc64le
 zip_keys:
