@@ -19,7 +19,7 @@ docker_image:
 openssl:
 - '3.5'
 poco:
-- 1.14.2
+- 1.15.0
 target_platform:
 - linux-64
 zip_keys:
