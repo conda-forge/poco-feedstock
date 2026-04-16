@@ -11,6 +11,6 @@ cxx_compiler:
 openssl:
 - '3.5'
 poco:
-- 1.15.0
+- 1.15.1
 target_platform:
 - win-64
