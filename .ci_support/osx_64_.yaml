@@ -23,7 +23,7 @@ macos_machine:
 openssl:
 - '3.5'
 poco:
-- 1.15.1
+- 1.15.2
 target_platform:
 - osx-64
 zip_keys:
